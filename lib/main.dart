@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:storeapp/screens/home/home_screen.dart';
-import 'package:storeapp/shared/consts.dart';
+import 'package:storeapp/ui/screens/details/details_screen.dart';
+import 'package:storeapp/ui/screens/home/home_screen.dart';
+import 'package:storeapp/ui/screens/home/see_all/show_new_arrival_screen.dart';
+import 'package:storeapp/ui/screens/details/details_screen.dart';
+import 'package:storeapp/ui/shared/consts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,13 +23,15 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Gordita',
         scaffoldBackgroundColor: bgColor,
         textTheme: const TextTheme(
-          bodyText2: TextStyle(
-            color: blackColor54,
-          )
-        ),
+            bodyText2: TextStyle(
+          color: blackColor54,
+        )),
       ),
-      home: const HomeScreen(),
+      initialRoute: HomeScreen.id,
+      routes: {
+        HomeScreen.id: (context) => HomeScreen(),
+        ShowNewArrivalScreen.id: (context) => const  ShowNewArrivalScreen(),
+      },
     );
   }
 }
-

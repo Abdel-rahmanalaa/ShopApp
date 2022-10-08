@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:storeapp/screens/home/components/categories.dart';
-import 'package:storeapp/screens/home/components/new_arrival.dart';
-import 'package:storeapp/screens/home/components/popular.dart';
-import 'package:storeapp/screens/home/components/search_form.dart';
-import 'package:storeapp/shared/consts.dart';
+import 'package:storeapp/models/product.dart';
+import 'package:storeapp/services/get_all_products.dart';
+import 'package:storeapp/ui/screens/home/components/categories.dart';
+import 'package:storeapp/ui/screens/home/components/new_arrival.dart';
+import 'package:storeapp/ui/screens/home/components/popular.dart';
+import 'package:storeapp/ui/screens/home/components/search_form.dart';
+import 'package:storeapp/ui/shared/consts.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  HomeScreen({Key? key}) : super(key: key);
+
+  static String id = 'HomeScreen';
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +62,8 @@ class HomeScreen extends StatelessWidget {
                 style: TextStyle(fontSize: fontSize_18),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: defaultPadding_16),
+                padding:
+                    const EdgeInsets.symmetric(vertical: defaultPadding_16),
                 child: SearchForm(),
               ),
               const Categories(),

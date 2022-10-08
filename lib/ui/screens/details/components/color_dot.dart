@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:storeapp/shared/consts.dart';
+import 'package:storeapp/ui/shared/consts.dart';
 
 class ColorDot extends StatelessWidget {
   const ColorDot({

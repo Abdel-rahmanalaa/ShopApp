@@ -1,4 +1,4 @@
-import 'package:storeapp/shared/consts.dart';
+import 'package:storeapp/ui/shared/consts.dart';
 
 class Category{
   final String title , icon;

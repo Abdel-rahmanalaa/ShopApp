@@ -89,3 +89,13 @@ const String detailProduct_3Text =
     'A Casual Nolin is a collarless pullover shirt, by a round neckline and a placket about 3 to 5 inches (8 to 13 cm) long and usually having 2–5 buttons';
 const String colorsText = 'Colors';
 const addToCartText = 'Add to cart';
+
+// baseUrls
+const String baseUrl = 'https://fakestoreapi.com';
+const String baseUrlGetAllProducts = '$baseUrl/products';
+const String baseUrlGetAllCategories = '$baseUrl/products/categories';
+const String baseUrlGetCategory = '$baseUrl/products/category';
+
+// statusCode Exception text
+const String statusCodeException = 'there is a problem in status code, status code:';
+
