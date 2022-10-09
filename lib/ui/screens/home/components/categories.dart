@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:storeapp/models/category_model.dart';
-import 'package:storeapp/models/product_model.dart';
 import 'package:storeapp/services/get_all_categories.dart';
+import 'package:storeapp/ui/screens/home/show_category/show_category_screen.dart';
 import 'package:storeapp/ui/shared/consts.dart';
 
 class Categories extends StatelessWidget {
@@ -28,7 +28,13 @@ class Categories extends StatelessWidget {
                     child: CategoryCard(
                         title: categories[index],
                         icon: categoryList[index].icon!,
-                        press: () {}),
+                        press: () {
+                          Navigator.pushNamed(
+                            context,
+                            ShowCategoryScreen.id,
+                            arguments: categories[index],
+                          );
+                        }),
                   ),
                 ),
               ),
@@ -60,11 +66,12 @@ class Categories extends StatelessWidget {
 }
 
 class CategoryCard extends StatelessWidget {
-  CategoryCard(
-      {Key? key,
-      required this.title,
-      required this.icon,
-      required this.press,});
+  const CategoryCard({
+    Key? key,
+    required this.title,
+    required this.icon,
+    required this.press,
+  }) : super(key: key);
 
   final String title, icon;
   final VoidCallback press;

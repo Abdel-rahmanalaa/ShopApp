@@ -19,11 +19,16 @@ class SeeAllProduct extends StatelessWidget {
             List<ProductModel> products = snapshot.data!;
             return GridView.builder(
                 itemCount: products.length,
-                clipBehavior: Clip.none,
+                //clipBehavior: Clip.none,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: defaultPadding_16),
+                physics: const BouncingScrollPhysics(),
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  childAspectRatio: .96,
-                  crossAxisSpacing: 10,
+                  childAspectRatio: .8,
+                  crossAxisSpacing: 30,
                   mainAxisSpacing: 30,
                 ),
                 itemBuilder: (context, index) {

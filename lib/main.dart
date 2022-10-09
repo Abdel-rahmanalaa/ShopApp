@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:storeapp/ui/screens/home/home_screen.dart';
 import 'package:storeapp/ui/screens/home/see_all/show_new_arrival_screen.dart';
 import 'package:storeapp/ui/screens/home/see_all/show_product_screen.dart';
+import 'package:storeapp/ui/screens/home/show_category/show_category_screen.dart';
 import 'package:storeapp/ui/screens/update/update_screen.dart';
 import 'package:storeapp/ui/shared/consts.dart';
 
@@ -29,11 +30,11 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: HomeScreen.id,
       routes: {
-        HomeScreen.id: (context) => HomeScreen(),
+        HomeScreen.id: (context) => const HomeScreen(),
         ShowNewArrivalScreen.id: (context) => const  ShowNewArrivalScreen(),
         ShowProductScreen.id: (context)=> const ShowProductScreen(),
         UpdateProductScreen.id: (context) => const UpdateProductScreen(),
-
+        ShowCategoryScreen.id: (context) => const ShowCategoryScreen(),
       },
     );
   }

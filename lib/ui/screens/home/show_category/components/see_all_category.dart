@@ -1,33 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:storeapp/models/product_model.dart';
-import 'package:storeapp/services/get_all_products.dart';
+import 'package:storeapp/services/get_category.dart';
 import 'package:storeapp/ui/screens/details/details_screen.dart';
 import 'package:storeapp/ui/screens/home/components/product_card.dart';
 import 'package:storeapp/ui/shared/consts.dart';
 
-class SeeAllNewArrival extends StatelessWidget {
-  const SeeAllNewArrival({
-    Key? key,
-  }) : super(key: key);
+class SeeAllCategory extends StatelessWidget {
+  const SeeAllCategory({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    String name = ModalRoute.of(context)!.settings.arguments as String;
     return FutureBuilder<List<ProductModel>>(
-        future: AllProductsService().getAllProducts(),
+        future: CategoryServices().getCategoryProducts(categoryName: name),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             List<ProductModel> products = snapshot.data!;
             return GridView.builder(
                 itemCount: products.length,
-                //clipBehavior: Clip.none,
                 padding: const EdgeInsets.symmetric(horizontal: defaultPadding_16),
-                physics: const BouncingScrollPhysics(),
-                shrinkWrap: true,
-                scrollDirection: Axis.vertical,
+                clipBehavior: Clip.none,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  childAspectRatio: .8,
-                  crossAxisSpacing: 30,
+                  crossAxisCount: 1,
+                  childAspectRatio: 1.5,
+                  crossAxisSpacing: 10,
                   mainAxisSpacing: 30,
                 ),
                 itemBuilder: (context, index) {

@@ -115,3 +115,9 @@ const String imageHintText = 'image';
 
 // text of elevated button
 const String updateTextButton = 'update';
+
+// boolean
+bool isElectronics = false;
+bool isJewelery = false;
+bool isMen = false;
+bool isWomen = false;

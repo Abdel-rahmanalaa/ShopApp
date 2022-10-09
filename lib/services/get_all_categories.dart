@@ -1,5 +1,4 @@
 import 'package:storeapp/helper/api.dart';
-import 'package:storeapp/ui/shared/consts.dart';
 
 class AllCategoriesService {
   Future<List<dynamic>> getAllCategories() async {
