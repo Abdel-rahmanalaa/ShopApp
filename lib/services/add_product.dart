@@ -1,6 +1,6 @@
 import 'package:http/http.dart';
 import 'package:storeapp/helper/api.dart';
-import 'package:storeapp/models/product.dart';
+import 'package:storeapp/models/product_model.dart';
 import 'package:storeapp/ui/shared/consts.dart';
 
 class AddProductServices {

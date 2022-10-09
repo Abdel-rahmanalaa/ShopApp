@@ -56,6 +56,12 @@ const String pantsIcon = '${assetIcon}pants.svg';
 const String searchIcon = '${assetIcon}Search.svg';
 const String shirtIcon = '${assetIcon}shirt.svg';
 const String tShirtIcon = '${assetIcon}Tshirt.svg';
+const String earringsJewelIcon = '${assetIcon}earrings-jewel.svg';
+const String editIcon = '${assetIcon}edit.svg';
+const String engagementRingJewelIcon = '${assetIcon}engagement-ring-jewel.svg';
+const String laptopElectronicsIcon = '${assetIcon}laptop-electronics.svg';
+const String mobilePhoneElectronicsIcon = '${assetIcon}mobile-phone-electronics.svg';
+const String ringJewelIcon = '${assetIcon}ring-jewel.svg';
 
 // images
 const String product0 = '${assetImage}product_0.png';
@@ -89,6 +95,8 @@ const String detailProduct_3Text =
     'A Casual Nolin is a collarless pullover shirt, by a round neckline and a placket about 3 to 5 inches (8 to 13 cm) long and usually having 2–5 buttons';
 const String colorsText = 'Colors';
 const addToCartText = 'Add to cart';
+const updateProductText = 'Update Product';
+const String successText = 'success';
 
 // baseUrls
 const String baseUrl = 'https://fakestoreapi.com';
@@ -99,3 +107,11 @@ const String baseUrlGetCategory = '$baseUrl/products/category';
 // statusCode Exception text
 const String statusCodeException = 'there is a problem in status code, status code:';
 
+// hintText of custom text
+const String productNameHintText = 'Product Name';
+const String descriptionHintText = 'description';
+const String priceHintText = 'price';
+const String imageHintText = 'image';
+
+// text of elevated button
+const String updateTextButton = 'update';

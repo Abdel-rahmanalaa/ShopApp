@@ -1,15 +1,14 @@
 import 'package:storeapp/helper/api.dart';
-import 'package:storeapp/models/product.dart';
-import 'package:storeapp/ui/shared/consts.dart';
+import 'package:storeapp/models/product_model.dart';
 
-class UpdateServices{
+class UpdateServices {
   Future<ProductModel> updateProduct(
       {required int id,
-        required String title,
-        required String price,
-        required String description,
-        required String image,
-        required String category}) async {
+      required String title,
+      required String price,
+      required String description,
+      required String image,
+      required String category}) async {
     print('product id = $id');
     Map<String, String> body = {
       'title': title,
@@ -18,7 +17,8 @@ class UpdateServices{
       'image': image,
       'category': category,
     };
-    Map<String, dynamic> data = await Api().post(
+    Map<String, dynamic> data = await Api().put(
+
       url: 'https://fakestoreapi.com/products/$id',
       body: body,
     );

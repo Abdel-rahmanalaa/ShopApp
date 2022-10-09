@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:storeapp/models/product.dart';
+import 'package:storeapp/models/product_model.dart';
 import 'package:storeapp/ui/screens/details/components/color_dot.dart';
+import 'package:storeapp/ui/screens/update/update_screen.dart';
 import 'package:storeapp/ui/shared/consts.dart';
 
 class DetailsScreen extends StatelessWidget {
-  DetailsScreen({Key? key, required this.product}): super(key: key);
+  DetailsScreen({Key? key, required this.product}) : super(key: key);
 
   final ProductModel product;
 
   static String id = 'DetailsScreen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,14 +24,18 @@ class DetailsScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
-            icon: CircleAvatar(
-                backgroundColor: whiteColor,
-                child: SvgPicture.asset(
-                  heartIcon,
-                  height: fontSize_20,
-                )),
-          )
+            onPressed: () {
+              Navigator.pushNamed(context, UpdateProductScreen.id,
+                  arguments: product);
+            },
+            icon: SvgPicture.asset(
+              editIcon,
+              height: 26,
+              width: 26,
+              color: blackColor54,
+              // fit: BoxFit.contain,
+            ),
+          ),
         ],
       ),
       body: Column(
@@ -75,10 +81,11 @@ class DetailsScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(vertical: defaultPadding_16),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: defaultPadding_16),
                       child: Text(
-                        detailProduct_0Text,
+                        product.description,
                       ),
                     ),
                     const Text(
@@ -119,8 +126,10 @@ class DetailsScreen extends StatelessWidget {
                         height: size_48,
                         child: ElevatedButton(
                           onPressed: () {},
-                          style: ElevatedButton.styleFrom(primary: primaryColor,
-                          shape: const StadiumBorder(),),
+                          style: ElevatedButton.styleFrom(
+                            primary: primaryColor,
+                            shape: const StadiumBorder(),
+                          ),
                           child: const Text(addToCartText),
                         ),
                       ),

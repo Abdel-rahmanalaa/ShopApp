@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:storeapp/models/product.dart';
+import 'package:storeapp/models/product_model.dart';
 import 'package:storeapp/services/get_all_products.dart';
 import 'package:storeapp/ui/screens/details/details_screen.dart';
 import 'package:storeapp/ui/screens/home/components/product_card.dart';
 import 'package:storeapp/ui/screens/home/components/section_title.dart';
+import 'package:storeapp/ui/screens/home/see_all/show_product_screen.dart';
 import 'package:storeapp/ui/shared/consts.dart';
 
 class Popular extends StatelessWidget {
@@ -21,7 +22,9 @@ class Popular extends StatelessWidget {
             children: [
               SectionTitle(
                 title: popularText,
-                pressSeeALl: () {},
+                  pressSeeALl: () {
+                    Navigator.pushNamed(context, ShowProductScreen.id);
+                  },
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,

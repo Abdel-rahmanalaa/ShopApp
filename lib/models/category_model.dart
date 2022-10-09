@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
 import 'package:storeapp/ui/shared/consts.dart';
 
 class Category{
-  final String title , icon;
+  final String? title , icon;
 
-  Category({required this.title, required this.icon});
+  Category({@required this.title, @required this.icon});
 }
 
 List<Category> demo_categories = [
@@ -24,4 +25,11 @@ List<Category> demo_categories = [
       title: tShirtText,
       icon: tShirtIcon,
   ),
+];
+
+List<Category> categoryList =[
+  Category(icon: laptopElectronicsIcon),
+  Category(icon: ringJewelIcon),
+  Category(icon: shirtIcon, ),
+  Category(icon: dressIcon),
 ];

@@ -1,5 +1,5 @@
 import 'package:storeapp/helper/api.dart';
-import 'package:storeapp/models/product.dart';
+import 'package:storeapp/models/product_model.dart';
 
 class AllProductsService extends Api {
   Future<List<ProductModel>> getAllProducts(

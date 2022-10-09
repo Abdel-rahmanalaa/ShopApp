@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:storeapp/models/product.dart';
+import 'package:storeapp/models/product_model.dart';
 import 'package:storeapp/ui/shared/consts.dart';
 
 class ProductCard extends StatelessWidget {
@@ -7,6 +7,7 @@ class ProductCard extends StatelessWidget {
   final Color? biColor;
   final int? price;
   final VoidCallback? press;
+  final String? description;
   ProductModel productModel;
 
    ProductCard(
@@ -15,6 +16,7 @@ class ProductCard extends StatelessWidget {
         @required this.image,
         @required this.title,
         @required this.biColor,
+        @required this.description,
         @required this.price,
         @required this.press});
   @override

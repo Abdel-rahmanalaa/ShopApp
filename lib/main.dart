@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:storeapp/ui/screens/details/details_screen.dart';
 import 'package:storeapp/ui/screens/home/home_screen.dart';
 import 'package:storeapp/ui/screens/home/see_all/show_new_arrival_screen.dart';
-import 'package:storeapp/ui/screens/details/details_screen.dart';
+import 'package:storeapp/ui/screens/home/see_all/show_product_screen.dart';
+import 'package:storeapp/ui/screens/update/update_screen.dart';
 import 'package:storeapp/ui/shared/consts.dart';
 
 void main() {
@@ -31,6 +31,9 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeScreen.id: (context) => HomeScreen(),
         ShowNewArrivalScreen.id: (context) => const  ShowNewArrivalScreen(),
+        ShowProductScreen.id: (context)=> const ShowProductScreen(),
+        UpdateProductScreen.id: (context) => const UpdateProductScreen(),
+
       },
     );
   }
