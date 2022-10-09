@@ -6,7 +6,7 @@ import 'package:storeapp/ui/screens/update/update_screen.dart';
 import 'package:storeapp/ui/shared/consts.dart';
 
 class DetailsScreen extends StatelessWidget {
-  DetailsScreen({Key? key, required this.product}) : super(key: key);
+  const DetailsScreen({Key? key, required this.product}) : super(key: key);
 
   final ProductModel product;
 
@@ -30,8 +30,8 @@ class DetailsScreen extends StatelessWidget {
             },
             icon: SvgPicture.asset(
               editIcon,
-              height: 26,
-              width: 26,
+              height: size_26,
+              width: size_26,
               color: blackColor54,
               // fit: BoxFit.contain,
             ),
@@ -53,7 +53,7 @@ class DetailsScreen extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(defaultPadding_16,
                   defaultPadding_16 * 2, defaultPadding_16, defaultPadding_16),
               decoration: const BoxDecoration(
-                color: Colors.white,
+                color: whiteColor,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(defaultBorderRadius * 3),
                   topRight: Radius.circular(defaultBorderRadius * 3),

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:storeapp/ui/shared/consts.dart';
@@ -19,17 +18,19 @@ Form SearchForm() {
         ),
         suffixIcon: Padding(
           padding: const EdgeInsets.symmetric(
-              horizontal: defaultPadding_16
+            horizontal: defaultPadding_16,
           ),
           child: SizedBox(
             height: size_48,
             width: size_48,
             child: ElevatedButton(
-              onPressed: (){},
+              onPressed: () {},
               style: ElevatedButton.styleFrom(
                 primary: primaryColor,
                 shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(defaultBorderRadius)),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(defaultBorderRadius),
+                  ),
                 ),
               ),
               child: SvgPicture.asset(filterIcon),

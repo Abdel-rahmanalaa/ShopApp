@@ -12,12 +12,37 @@ const Color dotColor_1 = Color(0xFF141B4A);
 const Color dotColor_2 = Color(0xFFF4E5C3);
 
 // padding sizes
+const double zero = 0;
+const double defaultBorderRadius = 12.0;
+const double defaultPadding_10 = 10.0;
 const double defaultPadding_12 = 12.0;
 const double defaultPadding_14 = 14.0;
 const double defaultPadding_16 = 16.0;
-const double defaultBorderRadius = 12.0;
-const double zero = 0;
+const double defaultPadding_30 = 30.0;
+
+// cross axis spacing
+const double crossAxisSpacing_10 = 10.0;
+const double crossAxisSpacing_30 = 30.0;
+
+// childAspectRatio
+const double childAspectRatio_0_8 = 0.8;
+const double childAspectRatio_1_8 = 1.8;
+
+// main axis spacing
+const double mainAxisSpacing_30 = 30.0;
+
+// cross axis counts
+const int crossAxisCount_1 = 1;
+const int crossAxisCount_2 = 2;
+
+// heights & width sizes
+const double size_20 = 20.0;
+const double size_26 = 26.0;
+const double size_28 = 28.0;
+const double size_40 = 40.0;
 const double size_48 = 48.0;
+const double size_132 = 132.0;
+const double size_154 = 154.0;
 const double size_200 = 200.0;
 
 // font sizes
@@ -60,7 +85,8 @@ const String earringsJewelIcon = '${assetIcon}earrings-jewel.svg';
 const String editIcon = '${assetIcon}edit.svg';
 const String engagementRingJewelIcon = '${assetIcon}engagement-ring-jewel.svg';
 const String laptopElectronicsIcon = '${assetIcon}laptop-electronics.svg';
-const String mobilePhoneElectronicsIcon = '${assetIcon}mobile-phone-electronics.svg';
+const String mobilePhoneElectronicsIcon =
+    '${assetIcon}mobile-phone-electronics.svg';
 const String ringJewelIcon = '${assetIcon}ring-jewel.svg';
 
 // images
@@ -70,6 +96,7 @@ const String product2 = '${assetImage}product_2.png';
 const String product3 = '${assetImage}product_3.png';
 
 // text
+const String storeAppText = 'Store App';
 const String locationText = '26/09 Sidi Graber';
 const String exploreText = 'Explore';
 const String sloganText = "best Outfits for you";
@@ -105,7 +132,8 @@ const String baseUrlGetAllCategories = '$baseUrl/products/categories';
 const String baseUrlGetCategory = '$baseUrl/products/category';
 
 // statusCode Exception text
-const String statusCodeException = 'there is a problem in status code, status code:';
+const String statusCodeException =
+    'there is a problem in status code, status code:';
 
 // hintText of custom text
 const String productNameHintText = 'Product Name';
@@ -115,9 +143,3 @@ const String imageHintText = 'image';
 
 // text of elevated button
 const String updateTextButton = 'update';
-
-// boolean
-bool isElectronics = false;
-bool isJewelery = false;
-bool isMen = false;
-bool isWomen = false;

@@ -4,7 +4,7 @@ import 'package:storeapp/services/get_all_products.dart';
 import 'package:storeapp/ui/screens/details/details_screen.dart';
 import 'package:storeapp/ui/screens/home/components/product_card.dart';
 import 'package:storeapp/ui/screens/home/components/section_title.dart';
-import 'package:storeapp/ui/screens/home/see_all/show_product_screen.dart';
+import 'package:storeapp/ui/screens/home/show_see_all/show_product_screen.dart';
 import 'package:storeapp/ui/shared/consts.dart';
 
 class Popular extends StatelessWidget {
@@ -22,9 +22,9 @@ class Popular extends StatelessWidget {
             children: [
               SectionTitle(
                 title: popularText,
-                  pressSeeALl: () {
-                    Navigator.pushNamed(context, ShowProductScreen.id);
-                  },
+                pressSeeALl: () {
+                  Navigator.pushNamed(context, ShowProductScreen.id);
+                },
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -39,10 +39,12 @@ class Popular extends StatelessWidget {
                         productModel: products[index],
                         press: () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      DetailsScreen(product: products[index])));
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  DetailsScreen(product: products[index]),
+                            ),
+                          );
                         },
                       ),
                     ),

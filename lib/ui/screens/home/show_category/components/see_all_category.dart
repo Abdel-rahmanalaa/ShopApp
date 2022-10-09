@@ -10,21 +10,26 @@ class SeeAllCategory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String name = ModalRoute.of(context)!.settings.arguments as String;
+    String categoryName = ModalRoute.of(context)!.settings.arguments as String;
     return FutureBuilder<List<ProductModel>>(
-        future: CategoryServices().getCategoryProducts(categoryName: name),
+        future:
+            CategoryServices().getCategoryProducts(categoryName: categoryName),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             List<ProductModel> products = snapshot.data!;
             return GridView.builder(
                 itemCount: products.length,
-                padding: const EdgeInsets.symmetric(horizontal: defaultPadding_16),
-                clipBehavior: Clip.none,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: defaultPadding_16),
+                physics: const BouncingScrollPhysics(),
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                //clipBehavior: Clip.none,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 1,
-                  childAspectRatio: 1.5,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 30,
+                  crossAxisCount: crossAxisCount_1,
+                  childAspectRatio: childAspectRatio_1_8,
+                  crossAxisSpacing: crossAxisSpacing_10,
+                  mainAxisSpacing: mainAxisSpacing_30,
                 ),
                 itemBuilder: (context, index) {
                   return ProductCard(

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:storeapp/ui/shared/consts.dart';
 
@@ -13,6 +12,7 @@ class ColorDot extends StatelessWidget {
   final Color color;
   final bool isActive;
   final VoidCallback press;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

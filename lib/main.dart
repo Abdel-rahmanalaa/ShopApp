@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:storeapp/ui/screens/home/home_screen.dart';
-import 'package:storeapp/ui/screens/home/see_all/show_new_arrival_screen.dart';
-import 'package:storeapp/ui/screens/home/see_all/show_product_screen.dart';
+import 'package:storeapp/ui/screens/home/show_see_all/show_new_arrival_screen.dart';
+import 'package:storeapp/ui/screens/home/show_see_all/show_product_screen.dart';
 import 'package:storeapp/ui/screens/home/show_category/show_category_screen.dart';
 import 'package:storeapp/ui/screens/update/update_screen.dart';
 import 'package:storeapp/ui/shared/consts.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Store App',
+      title: storeAppText,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'Gordita',
@@ -31,8 +31,8 @@ class MyApp extends StatelessWidget {
       initialRoute: HomeScreen.id,
       routes: {
         HomeScreen.id: (context) => const HomeScreen(),
-        ShowNewArrivalScreen.id: (context) => const  ShowNewArrivalScreen(),
-        ShowProductScreen.id: (context)=> const ShowProductScreen(),
+        ShowNewArrivalScreen.id: (context) => const ShowNewArrivalScreen(),
+        ShowProductScreen.id: (context) => const ShowProductScreen(),
         UpdateProductScreen.id: (context) => const UpdateProductScreen(),
         ShowCategoryScreen.id: (context) => const ShowCategoryScreen(),
       },

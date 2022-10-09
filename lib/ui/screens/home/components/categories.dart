@@ -47,21 +47,6 @@ class Categories extends StatelessWidget {
             );
           }
         });
-    // return SingleChildScrollView(
-    //   scrollDirection: Axis.horizontal,
-    //   child: Row(
-    //     children: List.generate(
-    //       demo_categories.length,
-    //       (index) => Padding(
-    //         padding: const EdgeInsets.only(right: defaultPadding_16),
-    //         child: CategoryCard(
-    //             title: demo_categories[index].title,
-    //             icon: demo_categories[index].icon,
-    //             press: () {}),
-    //       ),
-    //     ),
-    //   ),
-    // );
   }
 }
 
@@ -94,8 +79,8 @@ class CategoryCard extends StatelessWidget {
           children: [
             SvgPicture.asset(
               icon,
-              height: 40,
-              width: 40,
+              height: size_40,
+              width: size_40,
             ),
             const SizedBox(
               height: defaultPadding_16 / 2,

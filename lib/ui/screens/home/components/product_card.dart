@@ -10,38 +10,39 @@ class ProductCard extends StatelessWidget {
   final String? description;
   ProductModel productModel;
 
-   ProductCard(
+  ProductCard(
       {super.key,
-        required this.productModel,
-        @required this.image,
-        @required this.title,
-        @required this.biColor,
-        @required this.description,
-        @required this.price,
-        @required this.press});
+      required this.productModel,
+      @required this.image,
+      @required this.title,
+      @required this.biColor,
+      @required this.description,
+      @required this.price,
+      @required this.press});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: press,
       child: Container(
-        width: 154,
+        width: size_154,
         padding: const EdgeInsets.all(defaultPadding_16 / 2),
         decoration: const BoxDecoration(
             color: whiteColor,
             borderRadius:
-            BorderRadius.all(Radius.circular(defaultBorderRadius))),
+                BorderRadius.all(Radius.circular(defaultBorderRadius))),
         child: Column(
           children: [
             Container(
               decoration: BoxDecoration(
-                color:  biColor,
+                color: biColor,
                 borderRadius: const BorderRadius.all(
                   Radius.circular(defaultBorderRadius),
                 ),
               ),
               child: Image.network(
                 productModel.image,
-                height: 132,
+                height: size_132,
               ),
             ),
             const SizedBox(

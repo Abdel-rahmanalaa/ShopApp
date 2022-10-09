@@ -53,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                 exploreText,
                 style: Theme.of(context).textTheme.headline4!.copyWith(
                       fontWeight: fontWeight_500,
-                      color: Colors.black,
+                      color: blackColor,
                     ),
               ),
               const Text(
@@ -65,7 +65,7 @@ class HomeScreen extends StatelessWidget {
                     const EdgeInsets.symmetric(vertical: defaultPadding_16),
                 child: SearchForm(),
               ),
-               Categories(),
+              Categories(),
               const SizedBox(
                 height: defaultPadding_16,
               ),

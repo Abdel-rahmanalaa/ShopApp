@@ -18,7 +18,6 @@ class UpdateServices {
       'category': category,
     };
     Map<String, dynamic> data = await Api().put(
-
       url: 'https://fakestoreapi.com/products/$id',
       body: body,
     );

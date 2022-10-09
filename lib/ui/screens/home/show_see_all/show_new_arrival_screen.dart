@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:storeapp/ui/screens/home/see_all/components/see_all_new_arrival.dart';
+import 'package:storeapp/ui/screens/home/show_see_all/components/see_all_new_arrival.dart';
 import 'package:storeapp/ui/shared/consts.dart';
 
 class ShowNewArrivalScreen extends StatelessWidget {
@@ -23,7 +23,7 @@ class ShowNewArrivalScreen extends StatelessWidget {
                 backgroundColor: whiteColor,
                 child: SvgPicture.asset(
                   heartIcon,
-                  height: fontSize_20,
+                  height: size_20,
                 )),
           )
         ],

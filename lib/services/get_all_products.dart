@@ -2,9 +2,8 @@ import 'package:storeapp/helper/api.dart';
 import 'package:storeapp/models/product_model.dart';
 
 class AllProductsService extends Api {
-  Future<List<ProductModel>> getAllProducts(
-      // {required bool isReverse}
-  ) async {
+  Future<List<ProductModel>> getAllProducts(// {required bool isReverse}
+      ) async {
     List<dynamic> data =
         await Api().get(url: 'https://fakestoreapi.com/products');
 

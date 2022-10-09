@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:storeapp/ui/shared/consts.dart';
@@ -15,9 +14,7 @@ class Api {
       });
     }
 
-    http.Response response = await http.get(
-        Uri.parse(url),
-        headers: headers);
+    http.Response response = await http.get(Uri.parse(url), headers: headers);
 
     if (response.statusCode == 200) {
       return jsonDecode(response.body);
@@ -69,7 +66,7 @@ class Api {
       });
     }
     //print
-    print( 'url = $url, body = $body, token = $token');
+    print('url = $url, body = $body, token = $token');
     http.Response response = await http.put(
       Uri.parse(url),
       body: body,
