@@ -65,7 +65,7 @@ class HomeScreen extends StatelessWidget {
                     const EdgeInsets.symmetric(vertical: defaultPadding_16),
                 child: SearchForm(),
               ),
-              Categories(),
+              const Categories(),
               const SizedBox(
                 height: defaultPadding_16,
               ),

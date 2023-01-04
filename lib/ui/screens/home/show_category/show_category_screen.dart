@@ -7,12 +7,18 @@ class ShowCategoryScreen extends StatelessWidget {
   const ShowCategoryScreen({Key? key}) : super(key: key);
 
   static String id = 'ShowCategoryScreen';
+
   @override
   Widget build(BuildContext context) {
+    String categoryName = ModalRoute.of(context)!.settings.arguments as String;
     return Scaffold(
       appBar: AppBar(
+        title: Text(
+          categoryName,
+          style: const TextStyle(color: blackColor),
+        ),
         backgroundColor: transparentColor,
-        elevation: zero,
+        elevation: 1,
         leading: const BackButton(
           color: blackColor,
         ),
@@ -28,7 +34,7 @@ class ShowCategoryScreen extends StatelessWidget {
           )
         ],
       ),
-      body: SeeAllCategory(),
+      body: const SeeAllCategory(),
     );
   }
 }
